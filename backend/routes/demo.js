@@ -60,7 +60,7 @@ router.post('/',checkAuth,upload.single('postImage'),(req,res,next)=>{
     _id: new mongoose.Types.ObjectId(),
     title:req.body.title,
     body:req.body.body,
-    //postImage:req.file.path
+    postImage:req.file.path
   })
   post.save().then(result=>{
     console.log(result);
